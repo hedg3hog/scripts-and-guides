@@ -1,0 +1,17 @@
+
+volumes:
+  <volume_name>:
+
+services:
+  <service_name>:
+    image: <image_name>
+    restart: always
+    environment:
+      - <ke>=<value>
+    volumes:
+      - <volume_name>:<path_inside_container>
+    ports:
+    - <host_port>:<container_port>
+    networks:
+      - <network_name>
+    
