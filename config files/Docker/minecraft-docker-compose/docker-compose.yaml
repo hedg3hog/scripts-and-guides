@@ -1,0 +1,18 @@
+services:
+  - mc_server1:
+      image: itzg/minecraft-server
+      ports:
+        - 25565:25565
+        #- 25575:25575 # rcon port
+      
+      environment:
+        EULA: "TRUE"
+        TYPE: "PAPER"
+        VERSION: "LATEST"
+        INIT_MEMORY: "1G"
+        MAX_MEMORY: "4G"
+        DIFFICULTY: "normal"
+        #RCON_PASSWORD: "supersavepassword" # change this!
+
+      volumes:
+        - ~/mc_server1:/data
